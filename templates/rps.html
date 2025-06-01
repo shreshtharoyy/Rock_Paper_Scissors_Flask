@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%block head%} {%endblock%}
+
+{%block body%}
+    <div>
+        <h1>Rock Paper Scissors shoot!</h1>
+        <form method="post">
+            <button type="submit" name="choice" value="rock">Rock</button>
+            <button type="submit" name="choice" value="paper">Paper</button>
+            <button type="submit" name="choice" value="scissors">Scissors</button>
+        </form>
+
+        {% if result %}
+            <div class="result">
+                <p><strong>You chose:</strong> {{ user }}</p>
+                <p><strong>Computer chose:</strong> {{ computer }}</p>
+                <h2>{{ result }}</h2>
+            </div>
+        {% endif %}
+        
+    </div>
+
+{%endblock%}
